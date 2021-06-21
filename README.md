@@ -2,14 +2,14 @@
 Sends alerts when ETH gas prices go below a user-specified value
 
 # What you will need:
--Python 3+
--AutoRemote(Lite) (for notifications, script still works without)
--Tasker (required if using Autoremote)
--Selenium (how to install: https://pythonspot.com/selenium-install/)
--chromedriver*
--Google Chrome*
+*Python 3+
+*AutoRemote(Lite) (for notifications, script still works without)
+*Tasker (required if using Autoremote)
+*Selenium (how to install: https://pythonspot.com/selenium-install/)
+*chromedriver^
+*Google Chrome^
 
-* You can substitute Firefox and geckodriver for Google Chrome and chromedriver respectively.
+^You can substitute Firefox and geckodriver for Google Chrome and chromedriver respectively.
 
 # Getting Started
 First, users should open Custom_Gas_Alert.py and add the path to chromedriver behind 'executable path='.
