@@ -30,6 +30,8 @@ On your first time type 'y' (case sensitive) to set initial settings. Any time y
 5) If you answered "y" to the Autoremote URL, you should paste your custom URL (including custom notification) here.
 6) Once you've done this you may close out of user_settings.py.
 
+You can run user_settings.py at any time to change your settings.
+
 # Autoremote
 You can run the script without Autoremote, it will tell you if prices are below your threshold but it will not send a notification. Skip if you don't need notifications.
 
