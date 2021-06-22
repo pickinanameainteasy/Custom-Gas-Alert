@@ -12,12 +12,11 @@ Sends alerts when ETH gas prices go below a user-specified value
 *You can substitute Firefox and geckodriver for Google Chrome and chromedriver respectively.
 
 # Getting Started
-First, users should open Custom_Gas_Alert.py and add the path to chromedriver behind 'executable path='.
-Chromedriver can be downloaded here: https://chromedriver.chromium.org/downloads.
+You will need to download Chromedriver or Geckodriver for selenium to work (if using geckodriver, uncomment the firefox lines in the code and comment out the chrome lines). Chromedriver can be downloaded here: https://chromedriver.chromium.org/downloads and geckodriver here: https://github.com/mozilla/geckodriver/releases.
 If you are using a raspberry pi to run this script, please follow the instructions here: https://ivanderevianko.com/2020/01/selenium-chromedriver-for-raspberrypi.
-You will also need Google Chrome to be installed.
+You will also need Google Chrome or Firefox browser to be installed.
 
-After the path to chromedriver has been added you can close Custom_Gas_Alert.py.
+Save chromedriver.exe or geckodriver.exe to the same folder where Custom_Gas_Alerts.py is saved!!!
 
 # How to configure Settings
 Users should now run user_settings.py.
