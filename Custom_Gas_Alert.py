@@ -1,23 +1,29 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.firefox.options import Options
 import time
 import os
 
 # set path to settings
 curr_dir = os.getcwd()
 path = curr_dir + "\\settings.txt"
+path_cd = curr_dir + "\\chromedriver.exe"
+
+# FOR FIREFOX USERS ONLY
+#path_gd = curr_dir + "\\geckodriver.exe"
 
 # set selenium options
 options = Options()
 options.headless = True
 
 # set path to driver
-driver = webdriver.Chrome(executable_path=r'C:\Program Files (x86)\chromedriver\chromedriver.exe', options=options)
+driver = webdriver.Chrome(executable_path=path_cd, options=options)
+
+# FOR FIREFOX USERS ONLY
+#driver = webdriver.Firefox(executable_path=path_gd, options=options)
 
 # get webpage
 driver.get('https://gasnow.org')
-
-# wait for javascript to load
 time.sleep(5)
 
 # click more
@@ -37,7 +43,7 @@ with open(path, "r") as settings:
     txprice = settings_list[2]
     alerturl = settings_list[3]
 
-# search for index of user defined service
+# search for user defined service
 search_term = service[:-1]
 for item in elements:
     if search_term in item:
