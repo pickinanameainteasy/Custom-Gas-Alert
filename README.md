@@ -40,5 +40,4 @@ Once both Tasker and Autoremote(Lite) are installed, open Autoremote and locate 
 # Running the script
 Once settings are set (you can verify by opening 'settings.txt') you may run Custom_Gas_Alerts.py as much as you like.
 
-# Extras
 I recommend setting this script to run once a day (or at any time interval of your choice) using Task Schedular (Windows) or crontab (Linux) so you can strategically move your coins into defi with as little paid in gas as possible!
