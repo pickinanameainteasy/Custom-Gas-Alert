@@ -27,8 +27,7 @@ if alert_y_n == "y":
 elif alert_y_n == "n":
     alert_url = r'N/A'
 else:
-    print("Illegal input.")
-    exit()
+    print("Illegal input.") 
 
 print(defi_service, file=open(path, "a"))
 print(tx_speed, file=open(path, "a"))
