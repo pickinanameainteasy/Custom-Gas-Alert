@@ -14,7 +14,7 @@ options.headless = True
 # set path to driver
 driver = webdriver.Chrome(executable_path=r'C:\Program Files (x86)\chromedriver\chromedriver.exe', options=options)
 
-# selenium: get webpage
+# get webpage
 driver.get('https://gasnow.org')
 
 # wait for javascript to load
