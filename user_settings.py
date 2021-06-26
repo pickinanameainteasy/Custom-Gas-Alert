@@ -2,17 +2,17 @@ import os
 
 # set path to settings
 curr_dir = os.getcwd()
-path = curr_dir + "\\settings.txt"
+path = f'{curr_dir}\\settings.txt'
 
 # change settings prompt
 clear_settings = input("Would you like to change your settings? 'y' or 'n'\n")
 
-if clear_settings == "y":
+if clear_settings == "y" or clear_settings == "yes":
     f = open(path, "r+")
     f.seek(0)
     f.truncate()
     print("Settings cleared!")
-elif clear_settings == "n":
+elif clear_settings == "n" or clear_settings == "no":
     print("Goodbye.")
     exit()
 
