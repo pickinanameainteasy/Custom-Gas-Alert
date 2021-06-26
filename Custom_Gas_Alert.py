@@ -9,7 +9,6 @@ curr_dir = os.getcwd()
 path_set = f'{curr_dir}\\settings.txt'
 path_cd = f'{curr_dir}\\chromedriver.exe'   # COMMENT OUT IF USING FIREFOX
 #path_gd = f'{curr_dir}\\geckodriver.exe'   # UNCOMMENT IF USING FIREFOX
-print(path_set)
 
 # set selenium options
 sel_options = Options()
