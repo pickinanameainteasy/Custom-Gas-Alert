@@ -1,29 +1,28 @@
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.chrome.options import Options   # COMMENT OUT IF USING FIREFOX
+#from selenium.webdriver.firefox.options import Options   # UNCOMMENT IF USING FIREFOX
 import time
 import os
 
 # set path to settings
 curr_dir = os.getcwd()
-path = curr_dir + "\\settings.txt"
-path_cd = curr_dir + "\\chromedriver.exe"
-
-# FOR FIREFOX USERS ONLY
-#path_gd = curr_dir + "\\geckodriver.exe"
+path_set = f'{curr_dir}\\settings.txt'
+path_cd = f'{curr_dir}\\chromedriver.exe'   # COMMENT OUT IF USING FIREFOX
+#path_gd = f'{curr_dir}\\geckodriver.exe'   # UNCOMMENT IF USING FIREFOX
+print(path_set)
 
 # set selenium options
-options = Options()
-options.headless = True
+sel_options = Options()
+sel_options.headless = True
 
 # set path to driver
-driver = webdriver.Chrome(executable_path=path_cd, options=options)
+driver = webdriver.Chrome(executable_path=path_cd, options=sel_options)   # COMMENT OUT IF USING FIREFOX
+#driver = webdriver.Firefox(executable_path=path_gd, options=options)   # UNCOMMENT IF USING FIREFOX
 
-# FOR FIREFOX USERS ONLY
-#driver = webdriver.Firefox(executable_path=path_gd, options=options)
-
-# get webpage
+# selenium: get webpage
 driver.get('https://gasnow.org')
+
+# wait for javascript to load
 time.sleep(5)
 
 # click more
@@ -36,14 +35,14 @@ for element in driver.find_elements_by_xpath('//span'):
     elements.append(element.text)
 
 # load user settings
-with open(path, "r") as settings:
+with open(path_set, "r") as settings:
     settings_list = settings.readlines()
     service = settings_list[0]
     txspeed = settings_list[1]
     txprice = settings_list[2]
     alerturl = settings_list[3]
 
-# search for user defined service
+# search for index of user defined service
 search_term = service[:-1]
 for item in elements:
     if search_term in item:
