@@ -1,7 +1,7 @@
 READ THOROUGHLY!
 
 # Custom-Gas-Alert
-Sends alerts when ETH gas prices go below a user-specified value
+Sends alerts when ETH gas prices for a selected protocol go below a user-specified value
 
 # What you will need:
 1) Python 3+
