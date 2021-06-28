@@ -16,7 +16,7 @@ sel_options.headless = True
 
 # set path to driver
 driver = webdriver.Chrome(executable_path=path_cd, options=sel_options)   # COMMENT OUT IF USING FIREFOX
-#driver = webdriver.Firefox(executable_path=path_gd, options=options)   # UNCOMMENT IF USING FIREFOX
+#driver = webdriver.Firefox(executable_path=path_gd, options=sel_options)   # UNCOMMENT IF USING FIREFOX
 
 # selenium: get webpage
 driver.get('https://gasnow.org')
