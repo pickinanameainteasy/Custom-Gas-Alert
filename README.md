@@ -1,4 +1,4 @@
-READ THOROUGHLY!
+This code no longer works due to gasnow.org shutting down. New versions may be released in the future.
 
 # Custom-Gas-Alert
 Sends alerts when ETH gas prices for a selected protocol go below a user-specified value
